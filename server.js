@@ -23,9 +23,7 @@ app.use(express.json())    // Substitute for Body parser, which is now included 
 app.use(cors())
 
 // Basic check of server
-app.get('/', (req, res) => {
-    res.send('Success, server is running and responding')
-})
+app.get('/', (req, res) => {res.send('Success, server is running and responding')})
 
 // SIGNIN
 app.post('/signin', (req, res)  => { signin.handleSignin(req, res, db, bcrypt) })
